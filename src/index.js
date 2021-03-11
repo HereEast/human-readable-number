@@ -1,3 +1,9 @@
 module.exports = function toReadable (number) {
-    if (number === 0) return 'zero';
+  let zeroToNineteen = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 
+                      'eleven', 'twelve', 'thirteen', 'fourteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+
+  if (number < 20) {
+      return zeroToNineteen[number];
+  }
 }
+
