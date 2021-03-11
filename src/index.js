@@ -21,6 +21,8 @@ module.exports = function toReadable (number) {
   if (number > 100) {
       if (num[1] === '0' && num[2] === '0') {
           return oneToNineteen[num[0]] + ' hundred';
+      } else if (num[2] === '0') {
+        return oneToNineteen[num[0]] + ' hundred' + ' ' + twenties[num[1]];
       }
       return oneToNineteen[num[0]] + ' hundred' + ' ' + twenties[num[1]] + ' ' + oneToNineteen[num[2]];
   }
