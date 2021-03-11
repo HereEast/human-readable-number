@@ -18,12 +18,11 @@ module.exports = function toReadable (number) {
       return twenties[num[0]] + ' ' + oneToNineteen[num[1]];
   }
 
-  /* if (number >= 100) {
-      return oneToNineteen[num[0]] + ' hundred' + twenties[num[1]] + ' ' + oneToNineteen[num[2]];
+  if (number > 100) {
+      if (num[1] === '0' && num[2] === '0') {
+          return oneToNineteen[num[0]] + ' hundred';
+      }
+      return oneToNineteen[num[0]] + ' hundred' + ' ' + twenties[num[1]] + ' ' + oneToNineteen[num[2]];
   }
-
-  if (num[1] == 0 && num[2] == 0) {
-      return oneToNineteen[num[0]] + ' hundred';
-  } */
 }
 
